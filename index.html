@@ -36,23 +36,11 @@
       <a-sky color="#ECECEC"></a-sky>
 
       <!-- test entity -->
-      <script>
-        AFRAME.registerComponent('scale-on-mouseenter', {
-          schema: {
-            to: {default: '2.5 2.5 2.5'}
-          },
-          init: function () {
-            var data = this.data;
-            this.el.addEventListener('mouseenter', function () {
-              this.setAttribute('scale', data.to);
-            });
-          }
-        });
-      </script>
 
-      <a-box id="test_box" position="1 0.25 -4" rotation="0 0 0" scale=".5 .5 .5"
-         scale-on-mouseenter="to: 1.5 2 2" color="red">
+      <a-box id="test_box" position="1 0.25 -4" rotation="0 0 0" scale=".5 .5 .5" color="red">
         <a-animation attribute="position" to="1 5 -4" direction="alternate" dur="4000" repeat="indefinite"></a-animation>
+        <a-animation attribute="scale" begin="mouseenter" dur="300" to="2 2 2"></a-animation>
+        <a-animation attribute="scale" begin="mouseleave" dur="300" to=".5 .5 .5"></a-animation>
       </a-box>
 
     </a-scene>
