@@ -10,8 +10,7 @@ window.addEventListener("keydown", function(event){
     // move up with spacebar " "
     case " ":
       console.log(pos);
-      pos.y ++;
-      console.log(cam);
+      pos.y += .05;
       cam.setAttribute('position', pos);
       console.log("up");
       console.log(pos);
@@ -19,7 +18,7 @@ window.addEventListener("keydown", function(event){
     // move down with control "Control"
     case "Control":
       console.log(pos);
-      pos.y --;
+      pos.y -= .05;
       cam.setAttribute('position', pos);
       console.log("down");
       console.log(pos);

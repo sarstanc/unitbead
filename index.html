@@ -16,17 +16,18 @@
         <a-asset-item id="shape_02" src="assets/shape_02.obj"></a-asset-item>
       </a-assets>
 
+      <!-- asset shape_01 -->
       <a-entity position="-5 2 -8">
         <a-obj-model src="#shape_01" scale="0.25 0.25 0.25" color="#4CC3D9"></a-obj-model>
       </a-entity>
 
+      <!-- asset shape_02 -->
       <a-entity position="20 -5 -20">
         <a-obj-model src="#shape_02" rotation="0 0 90" scale="0.25 0.25 0.25" color="#66ffcc"></a-obj-model>
       </a-entity>
 
-      <!-- default camera height at 1.6m -->
-      <a-entity camera look-controls wasd-controls="fly: true" id="view">
-        <a-cursor color="#32CD32"></a-cursor>
+      <a-entity camera="userHeight: 1.6" look-controls wasd-controls="fly: true" id="view">
+        <a-cursor color="#ffcc00"></a-cursor>
       </a-entity>
 
       <a-sky color="blue"></a-sky>
@@ -34,8 +35,8 @@
       <!-- quad 2 - salmon -->
       <a-box position="250 0.5 -6" rotation="0 0 0" width="50" height="100" color="#ff6633"></a-box>
 
-      <!-- quad 4 - dandelion -->
-      <a-box position="-250 0.5 -250" rotation="0 0 0" width="40" height="70" color="#ffcc00"></a-box>
+      <!-- quad 4 - lime -->
+      <a-box position="-250 0.5 -250" rotation="0 0 0" width="40" height="70" color="#32CD32"></a-box>
 
       <!-- base plane -->
       <a-plane position="0 0 -4" rotation="-90 0 0" width="1000" height="1000" color="#7BC8A4"></a-plane>
