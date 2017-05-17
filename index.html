@@ -9,6 +9,16 @@
   <body>
     <a-scene>
 
+      <!-- default camera height at 1.6m -->
+      <a-entity camera
+                look-controls
+                wasd-controls="fly: true">
+      </a-entity>
+
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+
       <!-- quad 1 - blue -->
       <a-box position="-2 1 -6" rotation="0 0 0" height="2" color="#4CC3D9"></a-box>
 
@@ -40,23 +50,12 @@
         });
       </script>
 
-      <a-box id="test_box" position="0 0.25 -4" rotation="0 0 0" scale=".5 .5 .5"
-         scale-on-mouseenter="to: 2 2 2" color="red">
-        <a-animation attribute="position" to="0 5 -4" direction="alternate" dur="4000" repeat="indefinite"></a-animation>
+      <a-box id="test_box" position="1 0.25 -4" rotation="0 0 0" scale=".5 .5 .5"
+         scale-on-mouseenter="to: 1.5 2 2" color="red">
+        <a-animation attribute="position" to="1 5 -4" direction="alternate" dur="4000" repeat="indefinite"></a-animation>
       </a-box>
-
-      <!-- default camera height at 1.6m -->
-      <a-entity camera
-                look-controls
-                wasd-controls="fly: false">
-      </a-entity>
-
-      <a-camera>
-        <a-cursor></a-cursor>
-      </a-camera>
 
     </a-scene>
 
-    <script src="script.js"></script>
   </body>
 </html>
